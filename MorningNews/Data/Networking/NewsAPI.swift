@@ -12,7 +12,7 @@ struct NewsAPI: TargetType {
     
     let period: NewsPeriod
     
-    init(period: NewsPeriod = .day) {
+    init(period: NewsPeriod = .weak) {
         self.period = period
     }
     
