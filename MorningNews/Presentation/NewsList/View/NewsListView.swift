@@ -22,12 +22,14 @@ final class NewsListVeiw: UIView {
         tableView.dataSource = self
     }
     
+    //MARK: - showing Data and hiding error view
     func show(headlines: [String]) {
         errorView.isHidden = true
         headlinesArray = headlines
         tableView.reloadData()
     }
     
+    //MARK: - showing Error
     func show(error: String) {
         errorView.isHidden = false
         errorLabel.text = error

@@ -7,13 +7,20 @@
 
 import Foundation
 
+/**
+ inputProtocol represent the events triggered from the view controller
+ */
 protocol NewsListViewModelInput {
     func viewDidLoad()
     func didSelectItemAt(_ index: Int)
 }
 
+/**
+ outputProtocol represent the output result of the previously triggered event
+ */
 protocol NewsListViewModelOutput {
     var state: Observable<ViewModelState?> { get }
+    var headLines: [String] { get }
 }
 
 protocol NewsListViewModelProtocol: NewsListViewModelInput,
@@ -35,6 +42,9 @@ final class NewsListViewModel: NewsListViewModelProtocol {
         return items.map({$0.title})
     }
     
+    /**
+     askes the use case for the most popular news and revails the current state
+     */
     func fetchData() {
         state.value = .loading
         newsUseCase.loadNews { [weak self] newsList in
@@ -51,12 +61,18 @@ final class NewsListViewModel: NewsListViewModelProtocol {
         }
     }
     
-    func itemAt(index: Int) -> NewsEntity? {
+    /**
+     returns the New
+     */
+    func itemAt(index: Int) -> NewsViewModel? {
         guard items.count > index else { return nil }
-        return items[index]
+        return NewsViewModel(newsEntity: items[index])
     }
 }
 
+/**
+ Handling View triggered events
+ */
 extension NewsListViewModel {
     func viewDidLoad() {
         self.fetchData()

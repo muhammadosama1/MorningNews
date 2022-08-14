@@ -7,6 +7,9 @@
 
 import Foundation
 
+/**
+    NewsListResultResponse is a Data Entity, it should be used only inside data layer
+ */
 struct NewsListResponse: Codable {
     let status: String
     let numResults: Int?

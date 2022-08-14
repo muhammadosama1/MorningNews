@@ -7,6 +7,9 @@
 
 import UIKit
 
+/**
+ MainCoordinator is responsible for handling the navigation login
+ */
 class MainCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
@@ -15,14 +18,26 @@ class MainCoordinator: Coordinator {
         self.navigationController = navigationController
         navigationController.navigationBar.prefersLargeTitles = true
     }
-
+    
+    var newsRepository: NewsRepositoryProtocol {
+        return NewsRepository()
+    }
+    
+    var newsUseCase: NewsUseCaseProtocol {
+        return NewsUseCase(newsRepository: newsRepository)
+    }
+    
+    var viewModel: NewsListViewModelProtocol {
+        return NewsListViewModel(newsUseCase: newsUseCase,coordinator: self)
+    }
+    
     func start() {
-        let vc = NewsListViewController(viewModel: NewsListViewModel(newsUseCase: NewsUseCase(newsRepository: NewsRepository()), coordinator: self))
+        let vc = NewsListViewController(viewModel: viewModel)
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func navigateToDetail(_ newsEntity: NewsEntity) {
-        let vc = NewsDetailViewController(newsEntity: newsEntity)
+    func navigateToDetail(_ newsViewModel: NewsViewModel) {
+        let vc = NewsDetailViewController(newsViewModel: newsViewModel)
         navigationController.pushViewController(vc, animated: false)
     }
 }

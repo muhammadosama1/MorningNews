@@ -7,11 +7,18 @@
 
 import Foundation
 
+/**
+ NewsUseCaseProtocol is the contruct which describes properties and functionality of news
+ useCase, used to achieve dependency inversion
+ */
 protocol NewsUseCaseProtocol {
     func loadNews(success: @escaping ([NewsEntity])->Void,
                   failure: @escaping (String)->Void)
 }
 
+/**
+ NewUseCase meant to implement some business logic like rearranging data, sorting and search
+ */
 final class NewsUseCase: NewsUseCaseProtocol {
     
     let newsRepository: NewsRepositoryProtocol

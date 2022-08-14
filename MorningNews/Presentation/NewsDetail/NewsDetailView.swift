@@ -21,14 +21,13 @@ final class NewsDetailView: UIView {
         super.awakeFromNib()
     }
     
-    func show(data: NewsEntity) {
+    func show(data: NewsViewModel) {
         titleLabel.text = data.title
-        imageCaption.text = data.media.first?.caption
-        writerNameLabel.text = data.byline
-        descriptionLabel.text = data.abstract
+        imageCaption.text = data.caption
+        writerNameLabel.text = data.author
+        descriptionLabel.text = data.description
         publishedDateLabel.text = data.publishedDate
-        guard let imageUrl = data.media.first?.mediaMetadata.first?.url,
-              let url = URL(string: imageUrl) else { return }
+        guard let url = URL(string: data.imageUrl) else { return }
         Nuke.loadImage(with: url, into: articleImageView)
     }
 }

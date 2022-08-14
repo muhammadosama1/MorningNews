@@ -21,6 +21,6 @@ struct NewsViewModel {
         author = newsEntity.byline
         description = newsEntity.abstract
         publishedDate = newsEntity.publishedDate
-        imageUrl = newsEntity.media[2].mediaMetadata.first?.url ?? ""
+        imageUrl = newsEntity.media.first?.mediaMetadata.first?.url ?? ""
     }
 }

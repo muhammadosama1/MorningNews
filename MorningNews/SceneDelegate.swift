@@ -12,6 +12,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     var coordinator: MainCoordinator?
     
+    /**
+        Configuring the Window and assign Main Coordinator's navigation controller
+        as the root view controller of the window
+     */
     func scene(_ scene: UIScene,
                willConnectTo session: UISceneSession,
                options connectionOptions: UIScene.ConnectionOptions) {

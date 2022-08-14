@@ -8,6 +8,10 @@
 import Foundation
 import Moya
 
+/**
+    NewsRepository responsible for fetching remote data and caching,
+ updating and deleting data from local if needed 
+ */
 struct NewsRepository: Networkable, NewsRepositoryProtocol {
     
     var provider = MoyaProvider<NewsAPI>(plugins: [NetworkLoggerPlugin(configuration: .init(logOptions: .verbose))])
@@ -15,7 +19,7 @@ struct NewsRepository: Networkable, NewsRepositoryProtocol {
     func getNews(success: @escaping ([NewsEntity]) -> Void,
                  failure: @escaping (String) -> Void) {
         
-        provider.request(NewsAPI(period: .day)) { result in
+        provider.request(NewsAPI()) { result in
             switch result {
             case .success(let response):
                 do {

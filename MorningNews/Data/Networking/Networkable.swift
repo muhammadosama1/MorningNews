@@ -8,6 +8,10 @@
 import Foundation
 import Moya
 
+/**
+    Networkable protocol represents the contruct that should be implemented be
+    the caller of this api
+ */
 protocol Networkable {
     var provider: MoyaProvider<NewsAPI> { get }
     func getNews(success: @escaping ([NewsEntity])->Void,

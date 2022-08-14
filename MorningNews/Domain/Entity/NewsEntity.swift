@@ -7,6 +7,9 @@
 
 import Foundation
 
+/**
+ NewsEntity is Domain Entity for News Response
+ */
 struct NewsEntity {
     let url: String
     let id: Int

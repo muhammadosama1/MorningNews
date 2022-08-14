@@ -7,6 +7,9 @@
 
 import Foundation
 
+/**
+    Mappers to convert data entities into domain entities
+ */
 extension NewsListResultResponse {
     func mapping() -> NewsEntity {
         return NewsEntity(url: url,
@@ -26,7 +29,8 @@ extension MediaRsponse {
     func mapping() -> Media {
         return Media(type: type,
                      subtype: subtype,
-                     caption: caption, mediaMetadata: mediaMetadata.map({ $0.mapping() }))
+                     caption: caption,
+                     mediaMetadata: mediaMetadata.map({ $0.mapping() }))
     }
 }
 

@@ -9,12 +9,14 @@ import UIKit
 
 final class NewsListViewController: CustomViewController {
     
-    private let viewModel: NewsListViewModel
+    //MARK: - properties
+    private let viewModel: NewsListViewModelProtocol
     private lazy var containerView: NewsListVeiw = {
         return view as! NewsListVeiw
     }()
     
-    init(viewModel: NewsListViewModel) {
+    //MARK: - initialization
+    init(viewModel: NewsListViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: "NewsListVeiw", bundle: nil)
         containerView.articleSelected = articleDidSelect
@@ -24,9 +26,10 @@ final class NewsListViewController: CustomViewController {
         fatalError("init(code:) has not been implemented")
     }
     
+    //MARK: - Lifecycle events
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView()
+        title = "Morning News"
         bind()
         viewModel.viewDidLoad()
     }
@@ -35,14 +38,15 @@ final class NewsListViewController: CustomViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
+    /*
+     handing user tab on article, and it askes
+     the viewModel to navigate to detail
+     */
     private lazy var articleDidSelect: ((Int)->Void)? = { index in
         self.viewModel.didSelectItemAt(index)
     }
     
-    private func configureView() {
-        title = "Morning News"
-    }
-    
+    //MARK: - binding viewModel
     private func bind() {
         viewModel.state.observe(on: self) { [weak self] state in
             guard let self = self,

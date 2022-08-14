@@ -8,6 +8,9 @@
 import Foundation
 import Moya
 
+/**
+ NewsAPI respresent the moya endpoint of most popular news Api, it create the api final URL
+ */
 struct NewsAPI: TargetType {
     
     let period: NewsPeriod
@@ -29,9 +32,11 @@ struct NewsAPI: TargetType {
     }
     
     var task: Task {
-        //TODO: - add api key to seperate configurations file
-        return .requestParameters(parameters: ["api-key": "2ZGeFUoL5NKPpc9WA2JrxGG0GK4HrLaJ"],
-                                  encoding: URLEncoding.queryString)
+        return .requestParameters(
+            parameters:
+                ["api-key": Bundle.main.infoDictionary?["API_KEY"] as? String ?? ""],
+            encoding: URLEncoding.queryString
+        )
     }
     
     var headers: [String : String]? {
@@ -39,6 +44,9 @@ struct NewsAPI: TargetType {
     }
 }
 
+/**
+ NewsPeriod represents valid values for how far back in days which api accepts
+ */
 enum NewsPeriod: Int {
     case day = 1
     case weak = 7

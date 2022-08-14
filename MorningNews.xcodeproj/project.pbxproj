@@ -87,6 +87,7 @@
 		52903B0A28A980E30008E5A9 /* NewsDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsDetailView.xib; sourceTree = "<group>"; };
 		52903B0B28A980E30008E5A9 /* NewsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
 		52903B0F28A9811F0008E5A9 /* UserMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessages.swift; sourceTree = "<group>"; };
+		52903B1328A998930008E5A9 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +147,7 @@
 				52903B0028A980180008E5A9 /* Utils */,
 				52903ABC28A971590008E5A9 /* Resources */,
 				52903A9A28A9705E0008E5A9 /* Info.plist */,
+				52903B1328A998930008E5A9 /* Config.xcconfig */,
 			);
 			path = MorningNews;
 			sourceTree = "<group>";
@@ -514,6 +516,7 @@
 /* Begin XCBuildConfiguration section */
 		52903AB128A9705E0008E5A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52903B1328A998930008E5A9 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -575,6 +578,7 @@
 		};
 		52903AB228A9705E0008E5A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52903B1328A998930008E5A9 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

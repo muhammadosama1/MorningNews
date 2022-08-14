@@ -1,0 +1,10 @@
+//
+//  Config.xcconfig
+//  MorningNews
+//
+//  Created by muhammad osama on 8/14/22.
+//
+
+
+// MARK: - This file should have been ignored from git
+API_KEY = 2ZGeFUoL5NKPpc9WA2JrxGG0GK4HrLaJ

@@ -9,13 +9,15 @@ import UIKit
 
 final class NewsDetailViewController: UIViewController {
     
-    private let newsEntity: NewsEntity
+    //MARK: - properties
+    private let newsViewModel: NewsViewModel
     private lazy var containerView: NewsDetailView = {
         return view as! NewsDetailView
     }()
     
-    init(newsEntity: NewsEntity) {
-        self.newsEntity = newsEntity
+    //MARK: - initialization
+    init(newsViewModel: NewsViewModel) {
+        self.newsViewModel = newsViewModel
         super.init(nibName: "NewsDetailView", bundle: nil)
     }
     
@@ -23,9 +25,10 @@ final class NewsDetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Lifecycle event
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = false
-        containerView.show(data: newsEntity)
+        containerView.show(data: newsViewModel)
     }
 }
