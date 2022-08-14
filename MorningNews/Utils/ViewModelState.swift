@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ViewModelState {
+enum ViewModelState: Equatable {
     case loading
     case success
     case error(message: String)
