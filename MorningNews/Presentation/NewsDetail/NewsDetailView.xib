@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsDetailViewController" customModule="TechTask" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="J5I-Cu-fZf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NewsDetailView" customModule="TechTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJC-2c-48M">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tEZ-7h-o6k">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="543"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article Title with bold big font" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21U-aP-Yo5">
+                                    <rect key="frame" x="25" y="30" width="364" height="67"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="efH-ms-AIU">
+                                    <rect key="frame" x="25" y="122" width="364" height="180"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="180" id="bpZ-8S-Wmc"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0S-P5-4Qy">
+                                    <rect key="frame" x="25" y="310" width="364" height="54"/>
+                                    <string key="text">Anne Heche starred in several popular Hollywood films in the late 1990s, including “Donnie Brasco,” “Wag the Dog” and “Six Days Seven Nights.</string>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="sOa-lJ-L0M">
+                                    <rect key="frame" x="25" y="384" width="127" height="35"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDr-7s-AVB">
+                                            <rect key="frame" x="0.0" y="0.0" width="22.5" height="35"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czV-jr-KNE">
+                                            <rect key="frame" x="34.5" y="0.0" width="92.5" height="35"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="x6n-hI-E4D"/>
+                                    </constraints>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnP-Hi-J9a">
+                                    <rect key="frame" x="25" y="429" width="364" height="61"/>
+                                    <string key="text">The new guidelines eliminate quarantines and put less emphasis on social distancing, routine surveillance testing and contact tracing.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022-08-11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZN-O5-M6C">
+                                    <rect key="frame" x="25" y="505" width="80.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="B0S-P5-4Qy" firstAttribute="leading" secondItem="efH-ms-AIU" secondAttribute="leading" id="6PY-eF-9sF"/>
+                                <constraint firstAttribute="trailing" secondItem="LnP-Hi-J9a" secondAttribute="trailing" constant="25" id="7KA-o3-ta9"/>
+                                <constraint firstItem="sOa-lJ-L0M" firstAttribute="leading" secondItem="tEZ-7h-o6k" secondAttribute="leading" constant="25" id="BYO-wf-3Rl"/>
+                                <constraint firstItem="sOa-lJ-L0M" firstAttribute="top" secondItem="B0S-P5-4Qy" secondAttribute="bottom" constant="20" id="Bc2-u8-mWR"/>
+                                <constraint firstItem="efH-ms-AIU" firstAttribute="top" secondItem="21U-aP-Yo5" secondAttribute="bottom" constant="25" id="CPt-zF-G29"/>
+                                <constraint firstItem="21U-aP-Yo5" firstAttribute="leading" secondItem="tEZ-7h-o6k" secondAttribute="leading" constant="25" id="G9P-eh-dNv"/>
+                                <constraint firstItem="B0S-P5-4Qy" firstAttribute="trailing" secondItem="efH-ms-AIU" secondAttribute="trailing" id="GJc-WI-4Dl"/>
+                                <constraint firstItem="TZN-O5-M6C" firstAttribute="top" secondItem="LnP-Hi-J9a" secondAttribute="bottom" constant="15" id="Gkd-Tv-BiI"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TZN-O5-M6C" secondAttribute="trailing" constant="25" id="IeW-PS-4cL"/>
+                                <constraint firstItem="B0S-P5-4Qy" firstAttribute="top" secondItem="efH-ms-AIU" secondAttribute="bottom" constant="8" symbolic="YES" id="MVi-3M-LS0"/>
+                                <constraint firstAttribute="bottom" secondItem="TZN-O5-M6C" secondAttribute="bottom" constant="20" id="NAV-2N-atg"/>
+                                <constraint firstItem="efH-ms-AIU" firstAttribute="leading" secondItem="tEZ-7h-o6k" secondAttribute="leading" constant="25" id="NZy-WR-vrP"/>
+                                <constraint firstItem="LnP-Hi-J9a" firstAttribute="leading" secondItem="tEZ-7h-o6k" secondAttribute="leading" constant="25" id="Yi0-Bf-V6D"/>
+                                <constraint firstItem="21U-aP-Yo5" firstAttribute="top" secondItem="tEZ-7h-o6k" secondAttribute="top" constant="30" id="dIN-WJ-TcE"/>
+                                <constraint firstAttribute="trailing" secondItem="efH-ms-AIU" secondAttribute="trailing" constant="25" id="h4t-dJ-E5z"/>
+                                <constraint firstItem="TZN-O5-M6C" firstAttribute="leading" secondItem="tEZ-7h-o6k" secondAttribute="leading" constant="25" id="xcZ-pl-hsN"/>
+                                <constraint firstItem="LnP-Hi-J9a" firstAttribute="top" secondItem="sOa-lJ-L0M" secondAttribute="bottom" constant="10" id="y57-qi-mMV"/>
+                                <constraint firstAttribute="trailing" secondItem="21U-aP-Yo5" secondAttribute="trailing" constant="25" id="yMB-JS-fH0"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="tEZ-7h-o6k" firstAttribute="width" secondItem="XJC-2c-48M" secondAttribute="width" id="4ER-cu-nWh"/>
+                        <constraint firstItem="tEZ-7h-o6k" firstAttribute="leading" secondItem="XJC-2c-48M" secondAttribute="leading" id="aiR-kC-NQE"/>
+                        <constraint firstItem="tEZ-7h-o6k" firstAttribute="top" secondItem="XJC-2c-48M" secondAttribute="top" id="dbh-UU-YFu"/>
+                        <constraint firstAttribute="bottom" secondItem="tEZ-7h-o6k" secondAttribute="bottom" id="iGd-0a-tax"/>
+                        <constraint firstItem="tEZ-7h-o6k" firstAttribute="height" secondItem="XJC-2c-48M" secondAttribute="height" priority="250" id="t7L-aM-1IW"/>
+                        <constraint firstAttribute="trailing" secondItem="tEZ-7h-o6k" secondAttribute="trailing" id="wle-kN-SCz"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="XJC-2c-48M" secondAttribute="bottom" id="Mvy-94-eQp"/>
+                <constraint firstItem="XJC-2c-48M" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="UJl-dn-DDB"/>
+                <constraint firstItem="XJC-2c-48M" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="YGv-UB-Tl3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XJC-2c-48M" secondAttribute="trailing" id="YkN-P6-E9i"/>
+            </constraints>
+            <connections>
+                <outlet property="articleImageView" destination="efH-ms-AIU" id="vXI-Pw-AqR"/>
+                <outlet property="descriptionLabel" destination="LnP-Hi-J9a" id="Iob-fP-AvH"/>
+                <outlet property="imageCaption" destination="B0S-P5-4Qy" id="TUe-yW-nHj"/>
+                <outlet property="publishedDateLabel" destination="TZN-O5-M6C" id="96y-HS-lRl"/>
+                <outlet property="titleLabel" destination="21U-aP-Yo5" id="OiH-E5-T67"/>
+                <outlet property="writerNameLabel" destination="czV-jr-KNE" id="hQP-cK-FcH"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="139.95535714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
